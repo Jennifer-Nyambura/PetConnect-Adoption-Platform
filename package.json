@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/Jennifer-Nyambura/PetConnect-Adoption-Platform#readme",
   "dependencies": {
+    "@supabase/supabase-js": "^2.50.2",
     "next": "^15.3.4",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",

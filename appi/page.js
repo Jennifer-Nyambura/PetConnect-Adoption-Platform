@@ -118,3 +118,5 @@ export default async function Home() {
     </div>
   )
 }
+import PetAdoptionApp from "../components/pet-adoption-app"
+import ConfigNotice from "../components/config-notice"
