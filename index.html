@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PawConnect - Pet Adoption Platform</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="nav">
+                <h1 class="logo">🐾 PawConnect</h1>
+                <nav class="nav-links">
+                    <a href="#home">Home</a>
+                    <a href="#pets">Pets</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h2>Find Your Perfect Companion</h2>
+                    <p>Connect with loving pets looking for their forever homes</p>
+                    <button class="btn btn-primary" onclick="scrollToSection('pets')">Browse Pets</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="pets" class="pets-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Available Pets</h2>
+                    <div class="controls">
+                        <input type="text" id="searchInput" placeholder="Search pets..." class="search-input">
+                        <select id="filterSelect" class="filter-select">
+                            <option value="all">All Pets</option>
+                            <option value="dog">Dogs</option>
+                            <option value="cat">Cats</option>
+                            <option value="bird">Birds</option>
+                            <option value="rabbit">Rabbits</option>
+                        </select>
+                        <button class="btn btn-secondary" onclick="openAddPetModal()">Add New Pet</button>
+                    </div>
+                </div>
+                <div id="petsGrid" class="pets-grid">
+                    <!-- Pets will be dynamically loaded here -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pet Detail Modal -->
+    <div id="petModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closePetModal()">&times;</span>
+            <div id="petModalContent">
+                <!-- Pet details will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Add/Edit Pet Modal -->
+    <div id="addPetModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeAddPetModal()">&times;</span>
+            <h3 id="modalTitle">Add New Pet</h3>
+            <form id="petForm" class="pet-form">
+                <div class="form-group">
+                    <label for="petName">Name:</label>
+                    <input type="text" id="petName" required>
+                </div>
+                <div class="form-group">
+                    <label for="petType">Type:</label>
+                    <select id="petType" required>
+                        <option value="">Select type</option>
+                        <option value="dog">Dog</option>
+                        <option value="cat">Cat</option>
+                        <option value="bird">Bird</option>
+                        <option value="rabbit">Rabbit</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="petBreed">Breed:</label>
+                    <input type="text" id="petBreed" required>
+                </div>
+                <div class="form-group">
+                    <label for="petAge">Age:</label>
+                    <input type="text" id="petAge" required>
+                </div>
+                <div class="form-group">
+                    <label for="petGender">Gender:</label>
+                    <select id="petGender" required>
+                        <option value="">Select gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="petSize">Size:</label>
+                    <select id="petSize" required>
+                        <option value="">Select size</option>
+                        <option value="small">Small</option>
+                        <option value="medium">Medium</option>
+                        <option value="large">Large</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="petDescription">Description:</label>
+                    <textarea id="petDescription" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="petImage">Image URL:</label>
+                    <input type="url" id="petImage" placeholder="https://example.com/pet-image.jpg">
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn btn-secondary" onclick="closeAddPetModal()">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Save Pet</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>PawConnect</h4>
+                    <p>Connecting hearts with paws since 2024</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#pets">Adopt</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>📧 info@pawconnect.com</p>
+                    <p>📞 (555) 123-4567</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 PawConnect. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+</html>
