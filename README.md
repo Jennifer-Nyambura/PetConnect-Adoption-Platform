@@ -10,7 +10,12 @@ PetConnect is a modern pet adoption platform that connects loving pets with cari
 
 ## 🚀 **Live Demo**
 
+<<<<<<< HEAD
 **🌐 Website:** [https://petconnect-adoption-platform.onrender.com]  
+=======
+**🌐 Website:**  
+[https://pet-connect-adoption-platform-10v6wm0ax.vercel.app]
+>>>>>>> ade3af063d9bd548a72b6c17b840ed3ae1ea35d1
 **📂 Repository:** [https://github.com/Jennifer-Nyambura/PetConnect-Adoption-Platform](https://github.com/Jennifer-Nyambura/PetConnect-Adoption-Platform)
 
 ## ✨ **Key Features**
